@@ -1,0 +1,28 @@
+id: deepseek-r1
+name: DeepSeek-R1
+family: DeepSeek
+provider: ollama
+tags:
+  - deepseek-r1:7b
+  - deepseek-r1:14b
+  - deepseek-r1:32b
+default_tag: deepseek-r1:7b
+context_window: 65536
+license: MIT
+strengths:
+  - reasoning
+  - math
+  - code
+hardware_tiers:
+  low_ram:
+    tag: deepseek-r1:7b
+    vram_gb: 6
+    note: "Entry reasoning model for 8-12 GB RAM"
+  mid_ram:
+    tag: deepseek-r1:14b
+    vram_gb: 12
+    note: "Stronger reasoning for 16 GB RAM"
+  high_ram:
+    tag: deepseek-r1:32b
+    vram_gb: 20
+    note: "Best reasoning/math for 24+ GB RAM"

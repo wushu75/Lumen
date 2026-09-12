@@ -1,0 +1,22 @@
+id: mistral
+name: Mistral
+family: Mistral
+provider: ollama
+tags:
+  - mistral:7b
+default_tag: mistral:7b
+context_window: 32768
+license: Apache-2.0
+strengths:
+  - efficient
+  - general chat
+  - coding
+hardware_tiers:
+  low_ram:
+    tag: mistral:7b
+    vram_gb: 6
+    note: "Strong 7B baseline for 8-16 GB RAM"
+  high_ram:
+    tag: mistral:7b
+    vram_gb: 6
+    note: "Runs comfortably on 16+ GB RAM"

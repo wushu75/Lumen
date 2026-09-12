@@ -1,0 +1,23 @@
+id: llama3.2
+name: Llama 3.2
+family: Llama
+provider: ollama
+tags:
+  - llama3.2:1b
+  - llama3.2:3b
+default_tag: llama3.2:3b
+context_window: 131072
+license: Llama-Community
+strengths:
+  - lightweight
+  - general chat
+  - broad ecosystem
+hardware_tiers:
+  low_ram:
+    tag: llama3.2:1b
+    vram_gb: 2
+    note: "Tiny model for testing / very low RAM"
+  mid_ram:
+    tag: llama3.2:3b
+    vram_gb: 4
+    note: "Fast general chat for 8+ GB RAM"

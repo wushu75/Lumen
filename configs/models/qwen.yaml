@@ -1,0 +1,28 @@
+id: qwen3
+name: Qwen3
+family: Qwen
+provider: ollama
+tags:
+  - qwen3:8b
+  - qwen3:14b
+  - qwen3:32b
+default_tag: qwen3:8b
+context_window: 32768
+license: Apache-2.0
+strengths:
+  - multilingual
+  - coding
+  - general chat
+hardware_tiers:
+  low_ram:
+    tag: qwen3:8b
+    vram_gb: 6
+    note: "Good for 8-12 GB RAM machines"
+  mid_ram:
+    tag: qwen3:14b
+    vram_gb: 12
+    note: "Balanced quality for 16 GB RAM"
+  high_ram:
+    tag: qwen3:32b
+    vram_gb: 20
+    note: "Flagship local model for 24+ GB RAM"

@@ -1,0 +1,21 @@
+# Build + run the Lumen API server from the monorepo root context.
+FROM node:20-slim
+
+RUN corepack enable
+
+WORKDIR /app
+
+# Copy workspace manifests first for better layer caching.
+COPY pnpm-workspace.yaml package.json tsconfig.base.json ./
+COPY packages/core/package.json packages/core/
+COPY packages/ai/package.json packages/ai/
+COPY servers/api/package.json servers/api/
+
+# Install all workspace deps (source is TS, run via tsx).
+COPY . .
+RUN pnpm install --frozen-lockfile || pnpm install
+
+ENV PORT=8787
+EXPOSE 8787
+
+CMD ["pnpm", "--filter", "@lumen/api", "start"]

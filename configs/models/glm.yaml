@@ -1,0 +1,22 @@
+id: glm4
+name: GLM-4
+family: GLM
+provider: ollama
+tags:
+  - glm4:9b
+default_tag: glm4:9b
+context_window: 131072
+license: MIT
+strengths:
+  - general chat
+  - tool use
+  - agents
+hardware_tiers:
+  low_ram:
+    tag: glm4:9b
+    vram_gb: 8
+    note: "Balanced chat/agent model for 12-16 GB RAM"
+  high_ram:
+    tag: glm4:9b
+    vram_gb: 8
+    note: "Runs comfortably on 16+ GB RAM"

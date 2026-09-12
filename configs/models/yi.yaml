@@ -1,0 +1,28 @@
+id: yi
+name: Yi
+family: Yi
+provider: ollama
+tags:
+  - yi:6b
+  - yi:9b
+  - yi:34b
+default_tag: yi:9b
+context_window: 32768
+license: Apache-2.0
+strengths:
+  - long context
+  - bilingual
+  - general chat
+hardware_tiers:
+  low_ram:
+    tag: yi:6b
+    vram_gb: 5
+    note: "Compact bilingual model for 8-12 GB RAM"
+  mid_ram:
+    tag: yi:9b
+    vram_gb: 8
+    note: "Good default for 16 GB RAM"
+  high_ram:
+    tag: yi:34b
+    vram_gb: 22
+    note: "Long-context flagship for 24+ GB RAM"

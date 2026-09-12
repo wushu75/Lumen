@@ -1,0 +1,23 @@
+id: internlm2
+name: InternLM2
+family: InternLM
+provider: ollama
+tags:
+  - internlm2:7b
+  - internlm2:20b
+default_tag: internlm2:7b
+context_window: 32768
+license: Apache-2.0
+strengths:
+  - reasoning
+  - research
+  - general chat
+hardware_tiers:
+  low_ram:
+    tag: internlm2:7b
+    vram_gb: 6
+    note: "Research-friendly model for 8-12 GB RAM"
+  high_ram:
+    tag: internlm2:20b
+    vram_gb: 16
+    note: "Stronger reasoning for 24+ GB RAM"
